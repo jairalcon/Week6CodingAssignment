@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Week 6 Coding Assignment</title>
+        <!-- this helps the errors look better with some CSS -->
+        <link rel="stylesheet" href="./node_modules/mocha/mocha.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Week 6 Coding Assignment</h1>
+
+        <h2>I added a .gitignore that includes node_modules</h2>
+        <h3>Initialize node in your terminal for testing to work.</h3>
+
+        <!-- next 3 lines helps organize the test code look pretty -->
+        <div id="mocha"><p><a href=".">Index</a></p></div>
+        <div id="messages"></div>
+        <div id="fixtures"></div>
+        <!-- next 2 lines links to testing JS in node_modules -->
+        <script src="./node_modules/mocha/mocha.js"></script>
+        <script src="./node_modules/chai/chai.js"></script>
+        <script src="Week6CA.js"></script>
+        <script>mocha.setup('bdd')</script>
+        <script src="Week6CA.test.js"></script>
+        <script>mocha.run();</script>
+
+
+    </body>
+</html>
+
+<!-- JS is a front-end programming language. Node.js came out in 2009 which allowed it to be
+utilized on the back end -->
+
+<!-- Programming is writing instructions for a computer to follow
+We have to think about what all the small steps are, programming them one at a time. -->
+
+<!-- git
+    git workflow:
+
+    -Pull down changes so your workspace is up to date
+    -Make changes
+    -Stage your changes
+    -Take a snapshot of those changes
+    -Push changes to the remote branch
+    -Merge that branch into the master branch
+    -->
+
+    <!-- When working on a project with a team, making sure everyone has the same, 
+        up-to-date code is important. 
+
+Git is a Source Control tool used to enable teams to collaborate on projects at the same time. 
+If users make changes to the same file that would overwrite one another, 
+git provides merge conflict messages that enable users to manually adjust the multiple changes 
+so that no one's code is overwritten. Git also keeps track of all the changes made to a project 
+by using save-points called commits. 
+
+GitHub is a web-based git GUI that enables us to visually manage 
+our repositories and push our code to the cloud (GitHub servers). 
+
+To start a new project (which we will do each week in this program), 
+we need to create a new directory on our computer that will contain our 
+project/assignment code and then create a new repository on GitHub. 
+Once we create the repository on GitHub, 
+it will give us a list of commands to run via the 
+command line in the directory we created for our project. For example:
+
+
+1. We create a new directory for our weekly project on our 
+CLI - 'mkdir week1Assignment'
+
+2. We log in to our GitHub account and create a new repository 
+(name could be something like week1Assignment, as well).
+
+3. We run the commands that GitHub gives us in our 
+CLI in the directory we made (i.e. we have to cd into the directory first).
+
+
+The commands typically look like this:
+
+echo "# week1assignment" >> README.md
+
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git branch -M main
+
+git remote add origin https://github.com/GitUser/week1assignment.git
+
+git push -u origin main -->
+
+<!--- Note, instead of running 'git add README.md' we can run 'git add .' to add all files.
+
+
+Our CLI may prompt us with the following message:
+
+----------------------------------------------------
+
+Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+
+  git config --global user.name "Your Name"
+
+----------------------------------------------------
+
+
+If it does, we need to run the suggested commands and replace "you@example.com" and "Your Name" with our email and our name.
+
+You may also need to create a token. You can do so by following the official guide here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+After running these commands, our local computer's repository will be connected to the remote repository on GitHub and we can follow a git workflow to keep our code synced and uploaded to GitHub.
+
+
+Below is an overview of a basic git workflow.
+
+1. Pull down any changes so our workspace is up to date using the command 'git pull' in our existing git repository.
+
+2. Make any changes to our code or files.
+
+3. Stage the changes by using 'git add [files we want to add]' or 'git add .' to add all changed/new files.
+
+4. Take a snapshot of those changes (a commit) with 'git commit -am "commit message"' where the commit message is a short note summarizing what changes/additions we made. 
+
+5. Push changes to a remote branch using 'git push origin master:[branch name]' where branch name is the name of the branch we are pushing to.
+
+6. Create a pull request to merge our branch into the Main branch (this will be done on GitHub in our case). -->
